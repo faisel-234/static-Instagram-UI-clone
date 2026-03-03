@@ -1,0 +1,529 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* instagram - section */
+.instagram{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/* left - bar */
+.left_bar{
+    width: 18%;
+    height: 100vh;
+    border-right: 1px solid #504949;
+    overflow-y: auto;
+    /* background-color: blueviolet; */
+}
+
+/* logo */
+#logo{
+    font-family: "Lobster",cursive;
+    font-size: 29px;
+}
+
+.left_bar .items{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 12px;
+    font-size: 16px;
+    margin: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.left_bar .items .material-symbols-outlined{
+    margin-right: 12px;
+    font-size: 27px;
+}
+
+/* post - section */
+.post{
+    width: 55%;
+    height: 100vh;
+    overflow-y: auto;
+    /* background-color: yellowgreen; */
+}
+
+.post .story .items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.post .story{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.post .story .items .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.post .story .items .profile .img{
+    background-image: conic-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75);
+    padding: 2px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.post .story .items .profile .img img{
+ height: 60px;
+ width: 60px;
+ border-radius: 50%;
+ object-fit: cover;
+ display: block;
+ padding: 3px;
+}
+
+.post .main_post{
+    height: auto;
+    width: 90%;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.post .main_post .profile{
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.post .main_post .profile img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+    background-image: conic-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75);
+}
+
+.post .main_post .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post .main_post .img img{
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.post .main_post .engagement{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post .main_post .engagement .material-symbols-outlined{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.post .main_post .engagement .left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* suggestion - section */
+.suggestion_section{
+    width: 25%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+    /* background-color: blanchedalmond; */
+}
+
+.suggestion_section .suggestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.suggestion_section .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggestion_section .profile .img img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.suggestion_section .suggestion .follow{
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.suggestion_section .suggestion .profile p{
+    color: #bcbab7;
+}
+
+.suggestion_section .suggestion .see{
+    color: white;
+}
+
+.m{
+    margin-top: 40px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+    .instagram {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left_bar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #504949;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: visible;
+        padding: 10px 0;
+    }
+
+    .left_bar .items {
+        padding: 8px;
+        font-size: 14px;
+        margin: 0 5px;
+        flex-shrink: 0;
+    }
+
+    .left_bar .items .material-symbols-outlined {
+        margin-right: 8px;
+        font-size: 22px;
+    }
+
+    #logo {
+        font-size: 22px;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+
+    .post {
+        width: 100%;
+        height: auto;
+    }
+
+    .suggestion_section {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border-top: 1px solid #504949;
+    }
+}
+
+/* Large phones and small tablets (768px) */
+@media (max-width: 768px) {
+    .instagram {
+        flex-direction: column;
+    }
+
+    .left_bar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .left_bar .items {
+        padding: 6px 8px;
+        font-size: 12px;
+        margin: 0 3px;
+        flex-shrink: 0;
+    }
+
+    .left_bar .items .material-symbols-outlined {
+        margin-right: 5px;
+        font-size: 20px;
+    }
+
+    #logo {
+        font-size: 18px;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+
+    .post {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .post .story {
+        margin: 8px 0;
+        gap: 8px;
+    }
+
+    .post .story .items .profile .img img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .post .main_post {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .post .main_post .profile {
+        margin: 8px;
+        font-size: 14px;
+    }
+
+    .post .main_post .engagement .material-symbols-outlined {
+        font-size: 1.5rem;
+    }
+
+    .post .main_post .engagement .left {
+        gap: 15px;
+    }
+
+    .suggestion_section {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        border-top: 1px solid #504949;
+    }
+
+    .suggestion_section .suggestion {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .suggestion_section .profile .img img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .suggestion_section .suggestion .follow {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+/* Small phones (480px to 767px) */
+@media (max-width: 480px) {
+    .instagram {
+        flex-direction: column;
+    }
+
+    .left_bar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 8px;
+        border-bottom: 1px solid #504949;
+        overflow-x: auto;
+    }
+
+    .left_bar .items {
+        padding: 4px 6px;
+        font-size: 10px;
+        margin: 0 2px;
+        flex-direction: column;
+        flex-shrink: 0;
+        justify-content: center;
+    }
+
+    .left_bar .items .material-symbols-outlined {
+        margin-right: 0;
+        margin-bottom: 4px;
+        font-size: 18px;
+    }
+
+    #logo {
+        font-size: 16px;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    .post {
+        width: 100%;
+        height: auto;
+        padding: 8px;
+    }
+
+    .post .story {
+        margin: 6px 0;
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    .post .story .items .profile .img img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .post .story .items .profile p {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+
+    .post .main_post {
+        width: 98%;
+        margin: 10px auto;
+    }
+
+    .post .main_post .profile {
+        margin: 6px;
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .post .main_post .profile img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .post .main_post .img img {
+        border-radius: 8px;
+    }
+
+    .post .main_post .engagement {
+        margin: 8px 6px;
+        gap: 10px;
+    }
+
+    .post .main_post .engagement .material-symbols-outlined {
+        font-size: 1.3rem;
+    }
+
+    .post .main_post .engagement .left {
+        gap: 12px;
+    }
+
+    .suggestion_section {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        border-top: 1px solid #504949;
+    }
+
+    .suggestion_section .suggestion {
+        padding: 6px;
+        font-size: 11px;
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .suggestion_section .profile {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .suggestion_section .profile .img img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .suggestion_section .suggestion .follow {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .m {
+        margin-top: 20px;
+    }
+}
+
+/* Extra small phones (under 480px) */
+@media (max-width: 360px) {
+    .left_bar {
+        padding: 6px;
+    }
+
+    .left_bar .items {
+        padding: 3px 4px;
+        font-size: 9px;
+        margin: 0 1px;
+    }
+
+    .left_bar .items .material-symbols-outlined {
+        font-size: 16px;
+        margin-bottom: 2px;
+    }
+
+    #logo {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+
+    .post .story .items .profile .img img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .post .main_post {
+        width: 100%;
+    }
+
+    .post .main_post .profile {
+        font-size: 11px;
+    }
+
+    .post .main_post .profile img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .post .main_post .engagement .material-symbols-outlined {
+        font-size: 1.2rem;
+    }
+
+    .suggestion_section {
+        padding: 8px;
+    }
+
+    .suggestion_section .profile .img img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .suggestion_section .suggestion {
+        padding: 5px;
+        font-size: 10px;
+    }
+}
